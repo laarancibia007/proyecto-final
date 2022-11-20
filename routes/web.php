@@ -16,6 +16,36 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/categorias', function () {
+    return 'hola desde la categorias';
+});
+Route::get('/categorias/crear', function () {
+    return 'hola desde crear';
+});
+Route::get(' /{id}', function () {
+    return view('hola desde la modificacion');
+});
+Route::get('/categorias/del/{id}', function () {
+    return 'hola desde la eliminacion';
+});
+Route::get('/productos', function () {
+    return view('hola desde productos');
+});
+Route::get('/productos/crear', function () {
+    return view('hola desde la creacion de productos');
+});
+Route::get('/productos/mod/{id}', function () {
+    return view('hola desde la modificacion de productos');
+});
+Route::get('/productos/del/{id}', function () {
+    return view('hola desde la eliminacion de productos');
+});
+Route::get('/salidas/crear', function () {
+    return view('hola desde las salidas crear');
+});
+Route::get('/catalogo', function () {
+    return view('hola desde catalogo');
+});
 
 Auth::routes();
 
