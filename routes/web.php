@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,12 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/categorias', function () {
-    return 'hola desde la categorias';
-});
+Route::get('/categorias', [CategoriaController::class,'index']);
+Route::get('/categorias/crear', [CategoriaController::class,'crear']);
 Route::get('/categorias/crear', function () {
     return 'hola desde crear';
 });
+// Route::get('/categorias/crear', function () {
+//     return 'hola desde crear';
+// });
 Route::get(' /{id}', function () {
     return view('hola desde la modificacion');
 });
