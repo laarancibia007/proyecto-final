@@ -33,6 +33,9 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="#">Action 1</a>
                             <a class="dropdown-item" href="#">Action 2</a>
+                            {{-- Prueba de anadido de 2 list --}}
+                            <a class="dropdown-item" href="#">Action 3</a>
+                            <a class="dropdown-item" href="#">Action 4</a>
                         </div>
                     </li>
                 </ul>
