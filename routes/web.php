@@ -3,7 +3,11 @@
 // use App\Http\Controllers\Controller;
 // use Illuminate\Support\Facades\App;
 // use Illuminate\Support\Facades\Http;
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoriaController;
+// use App\Models\Categoria;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,18 +36,12 @@ Route::get('/', function () {
 //     return 'hola desde crear';
 // });
 
-Route::get('/categorias', function () {
-    return view('categorias.index');
-});
-Route::get('/categorias/crear', function () {
-    return 'hola desde crear';
-});
-Route::get('/categorias/mod/{id}', function () {
-    return view('hola desde la modificacion');
-});
-Route::get('/categorias/del/{id}', function () {
-    return 'hola desde la eliminacion';
-});
+Route::get('/categorias', [CategoriaController::class,'index']);
+Route::get('/categorias/crear', [CategoriaController::class,'crear']);
+Route::post('/categorias/crear', [CategoriaController::class,'postcrear']);
+Route::get('/categorias/mod/{id}', [CategoriaController::class,'mod']);
+Route::put('/categorias/mod/{id}', [CategoriaController::class,'postmod']);
+Route::get('/categorias/del/{id}', [CategoriaController::class,'del']);
 Route::get('/productos', function () {
     return view('hola desde productos');
 });
