@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <section class="index">
-            <header>
+            {{-- <header>
                 <div>
                     <a href="#">Concesionario Vehicular</a>
                     <!-- hamburguesa -->
@@ -26,7 +26,8 @@
                         <li><a href="inicio.html">Iniciar Sesion</a></li>
                     </ul>
                 </div>
-            </header>
+            </header> --}}
+
             <!-- Enterprise -->
             <section class="ent">
                 <picture>
@@ -78,7 +79,7 @@
                 </div>
             </section>
         </section>
-        <footer>Angel Arancibia &copy; 2022</footer>
+        {{-- <footer>Angel Arancibia &copy; 2022</footer> --}}
     </div>
 </body>
 </html>

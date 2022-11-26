@@ -47,6 +47,22 @@
       </div>
     </nav>
 
+{{-- <header>
+    <div>
+        <a href="#">Concesionario Vehicular</a>
+        <!-- hamburguesa -->
+        <!-- ul>li>a -->
+        <!-- esto permite crear una lista completa como atajo -->
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="catalogo.html">Productos</a></li>
+            <li><a href="inicio.html">Inicio de Sesion</a></li>
+        </ul>
+    </div>
+</header> --}}
+    <footer>Angel Arancibia &copy; 2022</footer>
+
     <main class="container py-4">
         @yield('content')
     </main>

@@ -14,7 +14,7 @@
     <div class="container">
         <!-- Header -->
         <section class="index">
-            <header>
+            {{-- <header>
                 <div>
                     <a href="#">Concesionario Vehicular</a>
                     <!-- hamburguesa -->
@@ -27,7 +27,7 @@
                         <li><a href="inicio.html">Inicio de Sesion</a></li>
                     </ul>
                 </div>
-            </header>
+            </header> --}}
             <section class="ent">
                 <picture>
                     <img src="/img/imagen7.jpg" alt="">
@@ -99,7 +99,7 @@
             </section>
         </section>
 
-        <footer>Angel Arancibia &copy; 2022</footer>
+        {{-- <footer>Angel Arancibia &copy; 2022</footer> --}}
     </div>
 </body>
 </html>
