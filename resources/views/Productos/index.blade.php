@@ -12,19 +12,23 @@
                     <th scope="col">Id</th>
                     <th scope="col">Imagen</th>
                     <th scope="col">Nombre</th>
-                    <th scope="col"colspan>Acciones</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col"colspan="2">Acciones</th>
                 </tr>
             </thead>
             <tbody>
-                @forelse($listaCat as $cat)
+                @forelse($listaprod as $p)
                 <tr class="">
-                    <td scope="row">{{$cat->id}}</td>
-                    <td><img src="{{asset('storage/'.$cat->img)}}" width="64" alt=""> </td>
-                    <td>{{$cat->nombre}}</td>
+                    <td scope="row">{{$p->id}}</td>
+                    <td><img src="{{asset('storage/'.$p->img)}}" width="64" alt=""> </td>
+                    <td>{{$p->nombre}}</td>
+                    <td>{{$p->precio}}</td>
+                    <td>{{$p->categoria_id}}</td>
                     <td>
-                        <a href="{{url('categorias/mod/'.$cat->id)}}" class="btn btn-warning">Modificar</a>
+                        <a href="{{url('categorias/mod/'.$p->id)}}" class="btn btn-warning">Modificar</a>
                     </td>
-                    <td><a href="{{url('categorias/del/'.$cat->id)}}" class="btn btn-warning">Eliminar</a></td>
+                    <td><a href="{{url('categorias/del/'.$p->id)}}" class="btn btn-warning">Eliminar</a></td>
                 </tr>
                 @empty
                 <tr>No hay datos...</tr>

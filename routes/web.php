@@ -6,6 +6,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ProductoController;
 // use App\Models\Categoria;
 
 
@@ -42,15 +43,9 @@ Route::post('/categorias/crear', [CategoriaController::class,'postcrear']);
 Route::get('/categorias/mod/{id}', [CategoriaController::class,'mod']);
 Route::put('/categorias/mod/{id}', [CategoriaController::class,'postmod']);
 Route::get('/categorias/del/{id}', [CategoriaController::class,'del']);
-Route::get('/productos', function () {
-    return view('hola desde productos');
-});
-Route::get('/productos/crear', function () {
-    return view('hola desde la creacion de productos');
-});
-Route::get('/productos/mod/{id}', function () {
-    return view('hola desde la modificacion de productos');
-});
+Route::get('/productos/crear', [ProductoController::class,'crear']);
+Route::post('/productos/crear', [ProductoController::class,'postcrear']);
+Route::get('/productos', [ProductoController::class,'index']);
 Route::get('/productos/del/{id}', function () {
     return view('hola desde la eliminacion de productos');
 });
