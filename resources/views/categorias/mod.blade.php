@@ -7,7 +7,7 @@
 
     </div>
 </div>
-{{var_dump($cat)}}
+{{-- {{var_dump($cat)}} --}}
 <div class="row">
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -29,7 +29,7 @@
         </div>
         <div class="mb-3">
             <img src="{{asset('storage/'.$cat->img)}}" alt="" class="img-fluid" width="300">
-            <label for="" class="form-label">Choose file</label>
+            <label for="" class="form-label">Elegir Archivo</label>
             <input type="file" class="form-control" name="img" id="" placeholder="" aria-describedby="fileHelpId">
             <div id="fileHelpId" class="form-text">Help text</div>
         </div>
