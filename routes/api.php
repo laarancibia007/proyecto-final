@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// prueba para ver los apis de mis productos
+// esto permite ver mis apis de las lista de productos desde otro framework
+// Route::get('/productos', function () {
+//     return ('lista de productos');
+// });
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

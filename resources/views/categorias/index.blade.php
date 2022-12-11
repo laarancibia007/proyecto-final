@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-{{-- cambio en extendes de app a master --}}
-
 @section('content')
 <h1>Lista de categorias</h1>
 <div class="row">
@@ -12,7 +10,7 @@
                     <th scope="col">Id</th>
                     <th scope="col">Imagen</th>
                     <th scope="col">Nombre</th>
-                    <th scope="col"colspan>Acciones</th>
+                    <th scope="col"colspan="2">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,7 +22,8 @@
                     <td>
                         <a href="{{url('categorias/mod/'.$cat->id)}}" class="btn btn-warning">Modificar</a>
                     </td>
-                    <td><a href="{{url('categorias/del/'.$cat->id)}}" class="btn btn-warning">Eliminar</a></td>
+                    <td><a href="{{url('categorias/del/{id}'.$cat->id)}}" class="btn btn-warning">Eliminar</a>
+                    </td>
                 </tr>
                 @empty
                 <tr>No hay datos...</tr>

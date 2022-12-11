@@ -3,7 +3,7 @@
 {{-- cambio en extendes de app a master --}}
 
 @section('content')
-<h1>Lista de categorias</h1>
+<h1>Lista de productos</h1>
 <div class="row">
     <div class="table-responsive">
         <table class="table table-primary">
@@ -26,9 +26,9 @@
                     <td>{{$p->precio}}</td>
                     <td>{{$p->categoria_id}}</td>
                     <td>
-                        <a href="{{url('categorias/mod/'.$p->id)}}" class="btn btn-warning">Modificar</a>
+                        <a href="{{url('productos/mod/'.$p->id)}}" class="btn btn-warning">Modificar</a>
                     </td>
-                    <td><a href="{{url('categorias/del/'.$p->id)}}" class="btn btn-warning">Eliminar</a></td>
+                    <td><a href="{{url('productos/del/{id}'.$p->id)}}" class="btn btn-warning">Eliminar</a></td>
                 </tr>
                 @empty
                 <tr>No hay datos...</tr>

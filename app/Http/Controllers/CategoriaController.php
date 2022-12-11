@@ -18,7 +18,7 @@ class CategoriaController extends Controller
     }
     public function postcrear(Request $r)
     {
-        $validate = $r->validate([
+        $validated = $r->validate([
             "nombre"=>"required| unique:categorias,nombre|max:50",
             "img"=>"required"
         ]);
@@ -51,8 +51,6 @@ class CategoriaController extends Controller
     }
     public function del($id)
     {
-
-        // var_dump($r->all());
         $cat = Categoria::find($id);
         $cat->delete();
         return redirect('/categorias');

@@ -3,10 +3,11 @@
 @section('content')
 <div class="row">
     <div class="col-m6">
-        <h1>Formulario de insercion de productos</h1>
+        <h1>Formulario de Modificacion de Productos</h1>
 
     </div>
 </div>
+{{-- {{var_dump($cat)}} --}}
 <div class="row">
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -19,6 +20,7 @@
     @endif
     <form action="" method="post" enctype="multipart/form-data">
         @csrf
+        @method('PUT')
         <div class="mb-3">
             <label for="" class="form-label">Nombre</label>
             <input type="text"
@@ -47,12 +49,12 @@
             <select class="form-select form-select-lg" name="categoria_id" id="categoria_id">
                 <option selected>Seleccione una categoria</option>
                 {{-- mejorar acerca de los productos los id --}}
-                @foreach ($listacat as $cat)
-                    <option value="{{$cat->id}}">{{$cat->nombre}}</option>
+                @foreach ($listaprod as $p)
+                    <option value="{{$p->id}}">{{$p->nombre}}</option>
                 @endforeach
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="submit" class="btn btn-primary">Modificar</button>
     </form>
 </div>
 @endsection
